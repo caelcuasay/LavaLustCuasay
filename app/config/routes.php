@@ -51,3 +51,6 @@ $router->get('/contact-us', function() {
 
 $router->get('/product/display', 'Product::read');
 $router->match('/product/add', 'Product::create', 'GET|POST');
+//$router->match('/product/update', 'Product::update', 'GET|POST');
+$router->match('/product/update/{id}', 'Product::update', 'GET|POST');
+$router->get('/product/delete/{id}', 'Product::delete');
